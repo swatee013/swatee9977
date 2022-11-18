@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    /* background-color */
+    --bg-danger:#f63440;
+    --bg-danger:#090808;
+    --bg-light-white:#f5f5f5;
+
+    /* text color: ; */
+    --primary-font:"Poppins",sans-serif;
+    --text-white:#fff;
+    --text-black:#090808;
+    --text-danger:#ca232f;
+    --text-gray:#aaa;
+    --text-dark-gray:#777;
+}
+body{
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    background: var(--bg-danger);
+    color: var(--text-danger);
+    overflow-x: hidden;
+}
+a:hover{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+}
+.btn-danger{
+    background: var(--bg-danger);
+    border-color: var(--bg-danger);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.btn-danger:hover{
+    color: var(--text-danger);
+    background: transparent;
+}
+
+/* navigation  */
+#header .fixed-top{
+    box-shadow: 0 0.125rem 0.675rem rgb(51, 51, 58)
+}
+#header .fixed-bottom{
+    box-shadow: 0 0.125rem 0.675rem rgb(51, 51, 58)
+
+}
+#header .navbar-nav .nav-item .nav-link{
+    color: var(--text-black);
+    padding: 1rem 1rem;
+    text-align: center;
+
+}
+#header .navbar-nav .nav-item .nav-link:hover,
+ #header .navbar-nav .nav-item .nav-link.active{
+    color: var(--text-danger);
+ } 
+
+ /* home */
+
+ .home .home-banner-1,
+ .home .home-banner-2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 200% center;
+    min-height: 650px;
+    position: relative;
+    margin-top: 10px;
+    
+   
+
+  }
+  .home .home-banner-1{
+    background-image: url(https://outdoorgearlab-mvnab3pwrvp3t0.stackpathdns.com/photos/14/97/271181_12346_XXXL.jpg)
+  }
+  
+  .home .home-banner-2{
+    background-image: url(model.jpg)
+  }
+
+  .home .home-banner .home-banner-text{
+    position: absolute;
+    top: 50%;
+    left: 39%;
+    transform: translate(-110%, -50%);
+  }
+  .home .home-banner .home-banner-text h1{
+    font-size: 6rem;
+
+  }
+  .home .carousel-indicators[data-bs-target]{
+    background-color: var(--bg-danger);
+    width: 2.5rem;
+    height: 0.313rem;
+   }
+  .home .carousel-control-next-icon,
+  .home .carousel-control-prev-icon{
+    background: transparent;
+  }
+  .home .slider-icon{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-danger);
+  } 
+
+  /* offer css  */
+  .offers{
+    padding-top: 8.75rem;
+  }
+  .offers .offer-box .offer-image::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(to right,rgba(255,255,255,0)0%,rgba(255,255,255,0.3)-100%);
+   background: linear-gradient(to right,rgba(255,255,255,0)0%,rgba(255,255,255,0.3)-100%);
+   transform: skew(-25deg);
+  }
+
+  .offers .offer-box .offer-image img{
+    transform: scale(1.02);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .offers .offer-box .offer-image::before{
+    animation: effect_shine 1s;
+  }
+  @keyframes effect_shine {
+    100%{
+      left: 150%;
+    }
+    
+  }
+  .offers .offer-overlay::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+  .offers .offer-box .offer-info{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transition: all 250ms ease-out;
+    justify-content: center;
+    align-items: center;
+  }
+  .offers .offer-box .offer-info .heading-bigger{
+    font-size: 4.375rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: var(--text-white);
+  }
+  .offers .offer-box .offer-info .offer-title-1{
+    color: var(--text-white);
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+
+  }
+  .offers .offer-box .offer-info .btn-outline-danger:hover{
+    border-color: var(--bg-light-white);
+    background-color: var(--bg-danger);
+  }
+
+/* product */
+.products{
+  padding-top: 9.75rem;
+
+}
+.headline h2::before{
+  content: '';
+  width: 30%;
+  height: 0.125rem;
+  background-color: var(--bg-danger);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 0.625rem;
+}
+.products a{
+  text-decoration: none;
+  color: var(--text-black);
+}
+/* contact */
+.content{
+  padding:4rem 0;
+  background-color: var(--text-gray);
+}
+.content .info li p a{
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0.75rem 0;
+  color: var(--text-black);
+}
+.content .form-group{
+  margin-bottom: 1.5rem;
+}
+
+/* footer */
+.copyright{
+  background: var(--text-black);
+}
+.copyright p,
+.copyright a{
+  color: var(--text-white);
+}
